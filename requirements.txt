@@ -1,0 +1,11 @@
+torchvision
+streamlit
+wheel
+numpy
+Pillow
+plotly
+tqdm
+timm
+clip
+kaolin
+git+https://github.com/facebookresearch/pytorch3d.git

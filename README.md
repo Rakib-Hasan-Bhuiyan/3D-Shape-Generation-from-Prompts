@@ -3,7 +3,7 @@
     <img src="images/model_architecture.png" alt="Overview">
 </p>
 
-Our model, **"Image2PCgen"** takes an single RGB image and generates a 3D point cloud. A text-to-image retrieval pipeline is used to generate point clouds from text propmts. The model is designed with pre-trained vision transformer (ViT base_patch_16) as the image encoder and a transformer-based point cloud decoder.
+Our model, **"Image2PCgen"** takes an single RGB image and generates a 3D point cloud. A text-to-image retrieval pipeline is used to generate point clouds from text propmts. The model is designed with pretrained vision transformer (ViT base_patch_16) as the image encoder and a transformer-based point cloud decoder.
 
 ## Installation
 This repository is tested on `Python 3.9.11`, `PyTorch 2.6.0` and `CUDA 12.4`
@@ -12,19 +12,9 @@ Clone the repository using:
 ```
 git clone https://github.com/Rakib-Hasan-Bhuiyan/Image2PCgen.git
 ```
-Navigate to project directory and install:
+Navigate to project directory and install the dependencies:
 ```
-pip install streamlit
-pip install torchvision
-pip install numpy
-pip install Pillow
-pip install plotly
-pip install tqdm
-pip install timm
-pip install clip
-pip install kaolin
-pip install wheel
-pip install "git+https://github.com/facebookresearch/pytorch3d.git"
+pip install -r requirements.txt
 ```
 
 ## Dataset
@@ -46,7 +36,7 @@ https://drive.google.com/file/d/1Ri7HFgZiDoY7mAJFuEXSauhEfJNZc348/view?usp=shari
 ```
 
 ## Inference
-Launch the streamlit application using:
+Navigate to project directory and launch the streamlit application using:
 ```
 streamlit run app.py
 ```

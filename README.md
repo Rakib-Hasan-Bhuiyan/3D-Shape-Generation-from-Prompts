@@ -36,9 +36,17 @@ https://drive.google.com/file/d/1Ri7HFgZiDoY7mAJFuEXSauhEfJNZc348/view?usp=shari
 ```
 
 ## Inference
+For text-to-3D, download image_embeddings.pkl and place it in the project directory:
+```
+https://drive.google.com/file/d/1lWTyT2hi4Gw-bn1Yoa_gFzU5mqIJOtAL/view?usp=sharing
+```
+Or, compute the paths and embeddings from the dataset using:
+```
+python utils.py compute_image_embeddings
+```
 Navigate to project directory and launch the streamlit application using:
 ```
 streamlit run app.py
 ```
-The application provides an easy to use UI and support for multi-modal inputs. 
+
 

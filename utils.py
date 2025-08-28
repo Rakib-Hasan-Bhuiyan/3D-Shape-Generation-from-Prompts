@@ -4,6 +4,7 @@ import math
 from torch.optim.lr_scheduler import LambdaLR
 import clip
 import pickle
+import argparse
 from PIL import Image
 from tqdm import tqdm
 
@@ -109,5 +110,13 @@ def precompute_image_embeddings():
     print(f"Saving {len(image_embeddings)} embeddings to {EMBEDDING_FILE}...")
     with open(EMBEDDING_FILE, 'wb') as f:
         pickle.dump(image_embeddings, f)
-
     print("Pre-computation complete.")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('function_name', type=str)
+    args = parser.parse_args()
+
+    if args.function_name == 'compute_image_embeddings':
+        precompute_image_embeddings()

@@ -7,6 +7,8 @@ import pickle
 from PIL import Image
 from tqdm import tqdm
 
+from dataset import get_dataloaders
+
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 CACHE_FILE = "shapenet_paths.pkl"
 EMBEDDING_FILE = "image_embeddings.pkl"
@@ -74,7 +76,7 @@ def precompute_image_embeddings():
 
     print("Loading dataset paths...")
     if not os.path.exists(CACHE_FILE):
-        raise FileNotFoundError("Run get_dataloaders() once to create shapenet_paths.pkl.")
+        get_dataloaders()
         
     with open(CACHE_FILE, 'rb') as f:
         all_items = pickle.load(f)
@@ -107,4 +109,5 @@ def precompute_image_embeddings():
     print(f"Saving {len(image_embeddings)} embeddings to {EMBEDDING_FILE}...")
     with open(EMBEDDING_FILE, 'wb') as f:
         pickle.dump(image_embeddings, f)
+
     print("Pre-computation complete.")

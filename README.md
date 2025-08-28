@@ -28,7 +28,7 @@ pip install "git+https://github.com/facebookresearch/pytorch3d.git"
 ```
 
 ## Dataset
-Download the ShapeNet (partial with three categories) dataset from here and place it in the project directory:
+Download the ShapeNet (partial with three categories) dataset from here and extract it in the project directory:
 ```
 https://drive.google.com/file/d/1fqBnyboDD9mPGMM8QKGiaRsqJZe0-KUZ/view?usp=sharing
 ```

@@ -48,5 +48,5 @@ Navigate to project directory and launch the streamlit application using:
 ```
 streamlit run app.py
 ```
-
+The application has a convenient user interface and multi-modal input support. It loads the model, checkpoint and image_embeddings file and also includes the fidelity of saving the predicted point clouds. 
 
